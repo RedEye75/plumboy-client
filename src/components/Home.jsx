@@ -29,12 +29,16 @@ const Home = () => {
                   </span>
                 </a>
               </Link>
+
               <Link
-                rel="noopener noreferrer"
-                href="#"
-                className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-100"
+                to={"/about"}
+                className="group relative inline-block overflow-hidden border border-yellow-600 px-8 py-3 focus:outline-none focus:ring"
               >
-                About Us
+                <span class="absolute inset-y-0 right-0 w-[2px] bg-yellow-600 transition-all group-hover:w-full group-active:bg-yellow-500"></span>
+
+                <span class="relative text-lg font-semibold text-yellow-600 transition-colors group-hover:text-white">
+                  About Us
+                </span>
               </Link>
             </div>
           </div>
