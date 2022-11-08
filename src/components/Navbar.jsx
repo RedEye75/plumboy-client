@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
   return (
     <div>
       <header className="text-gray-400 bg-black   body-font">
@@ -54,22 +62,38 @@ const Navbar = () => {
               Blogs
             </Link>
 
-            <Link
-              to={"/signIn"}
-              className="inline-block mr-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-            >
-              <span className="block rounded-full bg-black px-5 py-3 text-sm font-medium hover:bg-transparent">
-                Sign In
-              </span>
-            </Link>
-            <Link
-              to={"/signUp"}
-              className="inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-            >
-              <span className="block rounded-full bg-black px-5 py-3 text-sm font-medium hover:bg-transparent">
-                Sign Up
-              </span>
-            </Link>
+            {user?.uid ? (
+              <button
+                onClick={handleLogOut}
+                className="group relative ml-3 inline-block overflow-hidden border border-red-600 px-8 py-3 focus:outline-none focus:ring"
+              >
+                <span className="absolute inset-x-0 top-0 h-[2px] bg-red-600 transition-all group-hover:h-full group-active:bg-red-500"></span>
+
+                <span className="relative text-sm font-medium text-red-600 transition-colors group-hover:text-white">
+                  Sign Out
+                </span>
+              </button>
+            ) : (
+              <>
+                <Link
+                  to={"/signIn"}
+                  className="inline-block mr-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+                >
+                  <span className="block rounded-full bg-black px-5 py-3 text-sm font-medium hover:bg-transparent">
+                    Sign In
+                  </span>
+                </Link>
+
+                <Link
+                  to={"/signUp"}
+                  className="inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
+                >
+                  <span className="block rounded-full bg-black px-5 py-3 text-sm font-medium hover:bg-transparent">
+                    Sign Up
+                  </span>
+                </Link>
+              </>
+            )}
           </nav>
         </div>
       </header>
