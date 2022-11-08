@@ -2,11 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
+  const handleSignIn = (event) => {
+    event.preventDefault();
+  };
   return (
     <div>
       <div className="w-full max-w-md mt-28  p-8 space-y-3 rounded-xl mx-auto dark:text-gray-100">
         <h1 className="text-2xl font-bold text-black text-center">Sign In</h1>
         <form
+          onSubmit={handleSignIn}
           data-aos="fade-up"
           novalidate=""
           action=""
@@ -35,17 +39,15 @@ const SignIn = () => {
               <Link>Forgot Password?</Link>
             </div>
           </div>
-          {/* <button className="block w-64 mx-auto p-3 text-center  text-md font-semibold rounded-md dark:text-gray-900 dark:bg-green-600">
-            Sign in
-          </button> */}
-          <Link
-            to={"/signIn"}
-            className="inline-block mr-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-          >
-            <span className="block rounded-full text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent">
-              Sign In
-            </span>
-          </Link>
+
+          <input
+            className="mx-auto mr-3 rounded-full 
+            bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px]
+             hover:text-white focus:outline-none focus:ring active:text-opacity-75
+               text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
+            type="submit"
+            value="SignIn"
+          />
         </form>
 
         <div className="flex items-center pt-4 space-x-1">

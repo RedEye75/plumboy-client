@@ -5,10 +5,10 @@ const Service = ({ service }) => {
   const { title, price, img, description } = service;
   return (
     <div>
-      <div data-aos="fade-up" className="flex  justify-center">
-        <div className="rounded-lg shadow-lg bg-white max-w-sm">
+      <div data-aos="fade-up" className="flex max-w-screen-xl   justify-center">
+        <div className="rounded-lg border  bg-blue-200 ">
           <a href="#!">
-            <img className="rounded-t-lg h-48 w-full" src={img} alt="" />
+            <img className=" h-48 w-full" src={img} alt="" />
           </a>
           <div className="p-6">
             <h5

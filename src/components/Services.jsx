@@ -19,6 +19,7 @@ const Services = () => {
 
       <Link
         to={""}
+        data-aos="fade-up"
         className="group relative inline-block overflow-hidden border border-orange-600 px-8 py-3 focus:outline-none focus:ring"
       >
         <span className="absolute inset-y-0 right-0 w-[2px] bg-orange-600 transition-all group-hover:w-full group-active:bg-orange-500"></span>
