@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <div>
       <div className="w-full my-40 max-w-md p-8 mt-28 space-y-3 rounded-xl mx-auto dark:text-gray-100">
         <h1 className="text-2xl font-bold text-black text-center">Sign Up</h1>
         <form
+          onSubmit={handleSignUp}
           data-aos="fade-up"
           novalidate=""
           action=""
@@ -55,14 +71,20 @@ const SignUp = () => {
           {/* <button className="block w-64 mx-auto p-3 text-center  text-md font-semibold rounded-md dark:text-gray-900 dark:bg-green-600">
                 Sign in
               </button> */}
-          <Link
-            to={"/signIn"}
-            className="inline-block mr-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-          >
+          {/* <Link className="inline-block mr-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75">
             <span className="block rounded-full text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent">
               Sign Up
             </span>
-          </Link>
+          </Link> */}
+
+          <input
+            className="mx-auto mr-3 rounded-full 
+            bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px]
+             hover:text-white focus:outline-none focus:ring active:text-opacity-75
+               text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
+            type="submit"
+            value="SignIn"
+          />
         </form>
         <div className="flex items-center pt-4 space-x-1">
           <div

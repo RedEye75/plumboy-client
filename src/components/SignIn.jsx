@@ -2,15 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
-  const handleSignIn = (event) => {
-    event.preventDefault();
-  };
   return (
     <div>
       <div className="w-full max-w-md mt-28  p-8 space-y-3 rounded-xl mx-auto dark:text-gray-100">
         <h1 className="text-2xl font-bold text-black text-center">Sign In</h1>
         <form
-          onSubmit={handleSignIn}
           data-aos="fade-up"
           novalidate=""
           action=""
