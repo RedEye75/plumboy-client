@@ -1,50 +1,77 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const SignIn = () => {
-  return (
-    <div>
-      <div className="w-full max-w-md mt-28  p-8 space-y-3 rounded-xl mx-auto dark:text-gray-100">
-        <h1 className="text-2xl font-bold text-black text-center">Sign In</h1>
-        <form
-          data-aos="fade-up"
-          novalidate=""
-          action=""
-          className="space-y-6 ng-untouched ng-pristine ng-valid"
-        >
-          <div className="space-y-1 text-sm">
-            <input
-              type="text"
-              name="email"
-              id="username"
-              placeholder="Email"
-              data-aos="fade-right"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-200 dark:text-gray-100 focus:dark:border-violet-400"
-            />
-          </div>
-          <div className="space-y-1 text-sm">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              data-aos="fade-left"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 bg-gray-200 dark:text-black focus:dark:border-violet-400"
-            />
-            <div className="flex justify-end text-md font-semibold dark:text-red-800">
-              <Link>Forgot Password?</Link>
-            </div>
-          </div>
+  const { signIn } = useContext(AuthContext);
 
-          <input
-            className="mx-auto mr-3 rounded-full 
+  const handaleSignIn = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+  return (
+    <div className="max-w-screen-xl">
+      {/* <div className="w-full max-w-md mt-28  p-8 space-y-3 rounded-xl mx-auto dark:text-gray-100">
+        <h1 className="text-2xl font-bold text-black text-center">Sign In</h1>
+
+        <div className="flex justify-between gap-10">
+          <div>
+            <img
+              src="https://cdni.iconscout.com/illustration/premium/thumb/profile-login-6748762-5574989.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <form
+              onSubmit={handaleSignIn}
+              data-aos="fade-up"
+              novalidate=""
+              action=""
+              className="space-y-6 ng-untouched ng-pristine ng-valid"
+            >
+              <div className="space-y-1 text-sm">
+                <input
+                  type="text"
+                  name="email"
+                  id="username"
+                  placeholder="Email"
+                  data-aos="fade-right"
+                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-200 dark:text-gray-100 focus:dark:border-violet-400"
+                />
+              </div>
+              <div className="space-y-1 text-sm">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  data-aos="fade-left"
+                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 bg-gray-200 dark:text-black focus:dark:border-violet-400"
+                />
+                <div className="flex justify-end text-md font-semibold dark:text-red-800">
+                  <Link>Forgot Password?</Link>
+                </div>
+              </div>
+
+              <input
+                className="mx-auto mr-3 rounded-full
             bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px]
              hover:text-white focus:outline-none focus:ring active:text-opacity-75
                text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
-            type="submit"
-            value="SignIn"
-          />
-        </form>
+                type="submit"
+                value="SignIn"
+              />
+            </form>
+          </div>
+        </div>
 
         <div className="flex items-center pt-4 space-x-1">
           <div
@@ -121,7 +148,87 @@ const SignIn = () => {
             Sign up
           </Link>
         </p>
-      </div>
+      </div> */}
+
+      {/* ----------------------------------------------------- */}
+
+      <section className=" bg-blue-200 flex flex-wrap lg:h-screen lg:items-center ">
+        <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+          <div data-aos="fade-right" className="mx-auto max-w-lg text-center">
+            <h1 className="text-2xl font-bold sm:text-3xl">Please Sign In</h1>
+
+            <p className="mt-4 text-gray-500">
+              Please sign in for explore our services...!!
+            </p>
+          </div>
+
+          <form
+            data-aos="fade-left"
+            onSubmit={handaleSignIn}
+            action=""
+            className="mx-auto mt-8 mb-0 max-w-md space-y-4"
+          >
+            <div>
+              <label for="email" className="sr-only">
+                Email
+              </label>
+
+              <div className="relative">
+                <input
+                  type="email"
+                  name="email"
+                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                  placeholder="Enter email"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="password" className="sr-only">
+                Password
+              </label>
+              <div className="relative">
+                <input
+                  name="password"
+                  type="password"
+                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                  placeholder="Enter password"
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <p className="font-semibold text-gray-500">
+                No account?
+                <Link to={"/signUp"} className="font-bold ">
+                  {" "}
+                  Sign up
+                </Link>
+              </p>
+
+              <input
+                className="mx-auto mr-3 rounded-full 
+            bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px]
+             hover:text-white focus:outline-none focus:ring active:text-opacity-75
+               text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
+                type="submit"
+                value="SignIn"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          className=" h-64 w-full sm:h-96 lg:h-full p-20  lg:w-1/2"
+        >
+          <img
+            alt="Welcome"
+            src="https://d1idiaqkpcnv43.cloudfront.net/website1.0/images/sign-up.png"
+            className=" inset-0 h-full w-full object-cover"
+          />
+        </div>
+      </section>
     </div>
   );
 };

@@ -50,6 +50,9 @@ const Navbar = () => {
             >
               Contact
             </Link>
+            <Link to={"/blogs"} className="mr-5 font-bold hover:text-rose-600">
+              Blogs
+            </Link>
 
             <Link
               to={"/signIn"}
