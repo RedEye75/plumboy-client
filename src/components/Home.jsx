@@ -1,14 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import About from "./About";
+import Feature from "./Feature";
 
 const Home = () => {
   return (
     <div>
-      <section data-aos="fade-left" className="bg-white  dark:text-gray-500">
-        <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <section className="bg-white  dark:text-gray-500">
+        <div
+          data-aos="fade-right"
+          className="container  flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between"
+        >
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             <h1
-              data-aos="fade-down-right"
+              data-aos="zoom-in"
               className="text-3xl font-serif font-bold leading-none sm:text-6xl"
             >
               <span className="text-rose-800">Professional </span>
@@ -17,26 +22,25 @@ const Home = () => {
             </h1>
             <p className="mt-6 mb-8 text-lg sm:mb-12"></p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-              <Link>
-                <a
-                  class="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
-                  href="/download"
-                >
-                  <span class="absolute inset-x-0 top-0 h-[2px] bg-indigo-600 transition-all group-hover:h-full group-active:bg-indigo-500"></span>
+              <Link
+                to={"/services"}
+                className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
+                href="/download"
+              >
+                <span className="absolute inset-x-0 top-0 h-[2px] bg-indigo-600 transition-all group-hover:h-full group-active:bg-indigo-500"></span>
 
-                  <span class="relative text-lg font-semibold text-indigo-600 transition-colors group-hover:text-white">
-                    Need Help
-                  </span>
-                </a>
+                <span className="relative text-lg font-semibold text-indigo-600 transition-colors group-hover:text-white">
+                  Need Help
+                </span>
               </Link>
 
               <Link
                 to={"/about"}
                 className="group relative inline-block overflow-hidden border border-yellow-600 px-8 py-3 focus:outline-none focus:ring"
               >
-                <span class="absolute inset-y-0 right-0 w-[2px] bg-yellow-600 transition-all group-hover:w-full group-active:bg-yellow-500"></span>
+                <span className="absolute inset-y-0 right-0 w-[2px] bg-yellow-600 transition-all group-hover:w-full group-active:bg-yellow-500"></span>
 
-                <span class="relative text-lg font-semibold text-yellow-600 transition-colors group-hover:text-white">
+                <span className="relative text-lg font-semibold text-yellow-600 transition-colors group-hover:text-white">
                   About Us
                 </span>
               </Link>
@@ -51,6 +55,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <About></About>
+      <Feature></Feature>
     </div>
   );
 };

@@ -6,22 +6,21 @@ const About = () => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
-            <div className="w-full sm:p-4 px-4 mb-6">
+            <div className="w-full  sm:p-4 px-4 mb-6">
               <h1
                 data-aos="fade-right"
-                className="title-font font-bold text-xl mb-2 text-start text-rose-900"
+                className="title-font overflow-hidden font-bold text-xl mb-2 uppercase font-serif text-start text-rose-900"
               >
                 Best Plumbing services for you
               </h1>
-              <div
-                data-aos="zoom-out"
-                className="leading-relaxed font-semibold text-start"
-              >
-                The highly experienced plumber are here to help. Locally owned
-                and operated, we offer top-notch repair, installation and
-                maintenance services to home and business . With over 25 years
-                of experience in the industry, you can count on our skilled
-                technicians to provide the superior plumbing results you need.
+              <div data-aos="zoom-out" className="font-semibold text-start">
+                <p className="overflow-hidden">
+                  The highly experienced plumber are here to help. Locally owned
+                  and operated, we offer top-notch repair, installation and
+                  maintenance services to home and business . With over 25 years
+                  of experience in the industry, you can count on our skilled
+                  technicians to provide the superior plumbing results you need.
+                </p>
               </div>
             </div>
             <div data-aos="fade-up" className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">

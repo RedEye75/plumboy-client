@@ -1,0 +1,158 @@
+[
+  {
+    "_id": "635a0c0b64a6d231228942ae",
+    "service_id": "04",
+    "title": "Plumbing Installation",
+    "img": "https://img.freepik.com/free-photo/young-engineer-adjusting-autonomous-heating_1303-26539.jpg?w=1060&t=st=1667901290~exp=1667901890~hmac=ae38033b2f2a48c130f2637383f9d80d96b7408ed9ea8bef6c98028ee186003a",
+    "price": "$68",
+    "description": " Plumbing uses pipes, valves, plumbing fixtures, tanks, and other apparatuses to convey fluids. Heating and cooling, waste removal, and potable water delivery are among the most common uses for plumbing, but it is not limited to these applications. ",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
+  },
+  {
+    "_id": "635a0c0b64a6d231228942af",
+    "service_id": "05",
+    "title": "Commercial Service",
+    "img": "https://foxplumbing.com/wp-content/uploads/2021/04/services_img01.jpeg",
+    "price": "$64",
+    "description": "Commercial plumbers are specialized plumbers who work on housing or retail developments, commercial businesses, and properties. They repair, install, and maintain plumbing systems and services on a larger, more complex scale.!",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
+  },
+  {
+    "_id": "635b591a1dafe382a9da8c96",
+    "service_id": "01",
+    "title": "Residential Service",
+    "img": "https://i.pinimg.com/736x/24/a3/2e/24a32ee9af93c07427f428c8f6e2f2e0.jpg",
+    "price": "$50",
+    "description": "Definition of a residential service A residential service provides accommodation in return for payment of rent, with 4 or more residents, who occupy 1 or more rooms and individually pay rent and share facilities. Typically, each resident has the right to occupy 1 or more rooms but not the whole premises.!",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
+  },
+  {
+    "_id": "635b5afc1dafe382a9da8c98",
+    "service_id": "02",
+    "title": " Water Heater Repair",
+    "img": "https://media.istockphoto.com/id/482115611/photo/technician-servicing-heating-boiler.jpg?s=612x612&w=0&k=20&c=4sWwl0Q6VxbJgRbAJ7zB-Mh6lc_SuTManKG2k1dHPGU=",
+    "price": "$72",
+    "description": "Plumboy  #1 plumbing company in service and value through integrity, innovation, and interdependence, we have earned a positive reputation for the quality of our service. Don’t live with this type of inconvenience. Let us resolve your Orange County water heater issues now!!",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
+  },
+  {
+    "_id": "635b5b691dafe382a9da8c99",
+    "service_id": "03",
+    "title": "Emergency Services",
+    "img": "https://w7.pngwing.com/pngs/23/883/png-transparent-emergency-service-ambulance-plumbing-emergency-service-text-service-logo.png",
+    "price": "$102",
+    "description": "Looking for an emergency plumbing repair near you, no matter what? Whether your emergency happens first thing in the morning, on the weekend, or even on a holiday, you can count on ARS/Rescue Rooter to work with your schedule. No matter when disaster strikes, call our knowledgeable customer service representatives who can get you the plumbing help you need. As an national plumbing service provider, we can schedule a same-day plumber appointment that works for you or dispatch a technician to your home right away if you're dealing with an residential or commercial plumbing emergency.!",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
+  },
+  {
+    "_id": "635b5ba51dafe382a9da8c9a",
+    "service_id": "06",
+    "title": " Pipe Replacement",
+    "img": "https://www.affordarooterplumbing.com/wp-content/uploads/2019/10/AdobeStock_57172254.jpeg",
+    "price": "$92",
+    "description": "All plumbing pipes will eventually wear down. That’s why it’s important to get them checked by professionals on a routine basis and when you notice anything abnormal.At Ready & Able, we encourage homeowners to take any potential plumbing pipe problems seriously. What seems like a minor leak can quickly cause major damage to your home. The best way to avoid these headaches is by addressing concerns as soon as possible.!",
+    "facility": [
+      {
+        "name": "Instant Car Services",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "24/7 Quality Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Easy Customer Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      },
+      {
+        "name": "Quality Cost Service",
+        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+      }
+    ]
+  }
+]

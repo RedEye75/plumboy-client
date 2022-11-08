@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="mt-5">
+    <div className="mt-36 overflow-hidden">
       <h1
         data-aos="fade-left"
         className="text-3xl font-bold font-serif text-blue-500 border-b-2"
@@ -11,9 +11,9 @@ const Contact = () => {
       </h1>
       <section
         data-aos="zoom-in"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-10"
+        className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10 m-10"
       >
-        <article className="flex space-x-5 items-center">
+        <article className="flex overflow-hidden relative space-x-5 items-center">
           <img
             className="w-32 h-32 rounded-full"
             src="https://img.freepik.com/free-photo/plumber-with-his-arms-crossed_1368-515.jpg?w=360&t=st=1667853208~exp=1667853808~hmac=d1c0b7560593602b6805e0821fc37d1e371a07670606e6326fedd15ab0e30590"
