@@ -11,9 +11,9 @@ const Footer = () => {
               <div className="px-6">
                 <div>
                   <Link
-                    data-aos="fade-left"
+                    data-aos="zoom-in"
                     to="#"
-                    className="text-xl uppercase text-blue-800 font-bold   hover:text-gray-700 dark:hover:text-gray-300"
+                    className="text-2xl font-serif uppercase text-blue-800 font-bold   hover:text-gray-700 dark:hover:text-gray-300"
                   >
                     Plumboy
                   </Link>
@@ -78,9 +78,7 @@ const Footer = () => {
             <div data-aos="zoom-in-up" className="mt-6 lg:mt-0 lg:flex-1">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    About
-                  </h3>
+                  <h3 className=" font-bold text-blue-400 uppercase ">About</h3>
                   <Link
                     to="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
@@ -102,9 +100,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
-                    Blog
-                  </h3>
+                  <h3 className="font-bold text-blue-400 uppercase ">Blog</h3>
                   <Link
                     to="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
@@ -126,7 +122,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
+                  <h3 className="font-bold text-blue-400 uppercase ">
                     Products
                   </h3>
                   <Link
@@ -150,7 +146,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase dark:text-white">
+                  <h3 className="font-bold text-blue-400 uppercase ">
                     Contact
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">

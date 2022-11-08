@@ -7,6 +7,7 @@ import Error from "../components/Error";
 import Feature from "../components/Feature";
 import Home from "../components/Home";
 import Priceing from "../components/Priceing";
+import Reviews from "../components/Reviews";
 import Services from "../components/Services";
 import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
@@ -28,6 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
+      },
+      {
+        path: "/reviews/:id",
+        element: <Reviews></Reviews>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:7000/services/${params.id}`),
       },
 
       { path: "/about", element: <About></About> },
