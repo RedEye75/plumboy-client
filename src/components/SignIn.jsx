@@ -14,6 +14,7 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        form.reset();
       })
       .catch((error) => console.error(error));
   };
@@ -152,7 +153,7 @@ const SignIn = () => {
 
       {/* ----------------------------------------------------- */}
 
-      <section className=" bg-blue-200 flex flex-wrap lg:h-screen lg:items-center ">
+      <section className="  flex flex-wrap lg:h-screen lg:items-center ">
         <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
           <div data-aos="fade-right" className="mx-auto max-w-lg text-center">
             <h1 className="text-2xl font-bold sm:text-3xl">Please Sign In</h1>
@@ -177,7 +178,7 @@ const SignIn = () => {
                 <input
                   type="email"
                   name="email"
-                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                  className="w-full rounded-lg bg-blue-200 border-black p-4 pr-12 text-sm shadow-sm"
                   placeholder="Enter email"
                 />
               </div>
@@ -191,7 +192,7 @@ const SignIn = () => {
                 <input
                   name="password"
                   type="password"
-                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
+                  className="w-full  bg-blue-200 rounded-lg border-black p-4 pr-12 text-sm shadow-sm"
                   placeholder="Enter password"
                 />
               </div>
@@ -199,8 +200,8 @@ const SignIn = () => {
 
             <div className="flex items-center justify-between">
               <p className="font-semibold text-gray-500">
-                No account?
-                <Link to={"/signUp"} className="font-bold ">
+                No account ?
+                <Link to={"/signUp"} className="font-bold text-lime-800 ">
                   {" "}
                   Sign up
                 </Link>
@@ -212,7 +213,7 @@ const SignIn = () => {
              hover:text-white focus:outline-none focus:ring active:text-opacity-75
                text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
                 type="submit"
-                value="SignIn"
+                value="Sign In"
               />
             </div>
           </form>
@@ -224,7 +225,7 @@ const SignIn = () => {
         >
           <img
             alt="Welcome"
-            src="https://d1idiaqkpcnv43.cloudfront.net/website1.0/images/sign-up.png"
+            src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?w=740&t=st=1667978979~exp=1667979579~hmac=1fa79fec277840d52e989a46116a578d2607f7b649711c941885c57a25a7a9b1"
             className=" inset-0 h-full w-full object-cover"
           />
         </div>

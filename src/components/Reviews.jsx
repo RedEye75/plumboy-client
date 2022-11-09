@@ -1,8 +1,13 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import ServiceReviews from "./ServiceReviews";
 
 const Reviews = () => {
-  const { title, price, img, description } = useLoaderData();
+  const { title, _id, price, img, description } = useLoaderData();
+  const serviceDetails = {
+    serviceId: _id,
+    serviceName: title,
+  };
   return (
     <div data-aos="fade-up">
       <article className="overflow-hidden my-20  w-96 mx-auto shadow transition hover:shadow-lg">
@@ -21,6 +26,7 @@ const Reviews = () => {
           </p>
         </div>
       </article>
+      <ServiceReviews data={serviceDetails}></ServiceReviews>
     </div>
   );
 };
