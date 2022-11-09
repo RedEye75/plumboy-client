@@ -42,7 +42,11 @@ const UserFeedbacks = ({ feedback, updateReview, deleteReview }) => {
       </div> */}
       {/* <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl"> */}
       {/* <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3"> */}
-      <div className="p-6 border border-black rounded-lg">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="p-6 border border-black rounded-lg"
+      >
         <img
           className="object-cover object-center w-full mb-3 lg:h-3/4 md:h-36 rounded-xl"
           src={image}

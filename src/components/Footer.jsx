@@ -75,7 +75,11 @@ const Footer = () => {
               </div>
             </div>
 
-            <div data-aos="zoom-in-up" className="mt-6 lg:mt-0 lg:flex-1">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="3000"
+              className="mt-6 lg:mt-0 lg:flex-1"
+            >
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <div>
                   <h3 className=" font-bold text-blue-400 uppercase ">About</h3>
@@ -150,7 +154,7 @@ const Footer = () => {
                     Contact
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                    +1 526 654 8965
+                    +123456789
                   </span>
                   <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
                     plumboy@email.com

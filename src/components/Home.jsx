@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import About from "./About";
+import Service from "./Service";
 import Feature from "./Feature";
 
 const Home = () => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:7000/limitServices")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <div>
       <section className="bg-white  dark:text-gray-500">
@@ -57,6 +64,40 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl gap-3 ">
+        {services.map((service) => (
+          <Service key={service._id} service={service}></Service>
+        ))}
+      </div>
+
+      <Link
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        to={"/services"}
+        className="group  mt-3 mx-auto flex items-center justify-between w-56 rounded-lg border border-cyan-600 bg-cyan-600 px-5 py-2 transition-colors hover:bg-transparent focus:outline-none focus:ring"
+      >
+        <span class="font-medium  text-white transition-colors group-hover:text-cyan-600 group-active:text-cyan-500">
+          Find out more
+        </span>
+
+        <span class="ml-4 flex-shrink-0 rounded-full border border-current bg-white p-2 text-cyan-600 group-active:text-cyan-500">
+          <svg
+            className="h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </span>
+      </Link>
+
       <About></About>
       <Feature></Feature>
     </div>

@@ -54,17 +54,19 @@ const MyReview = () => {
 
   return (
     <div>
-      <h2></h2>
-
-      <section class="text-gray-400 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full ">
-            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-blue-400">
+      <section className="text-gray-400 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-col text-center w-full ">
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="3000"
+              className="sm:text-3xl text-2xl font-bold title-font mb-4 text-blue-400"
+            >
               Feedback = {feedbacks.length}
             </h1>
           </div>
-          {/* <div class="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1"> */}
-          <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
+          {/* <div className="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1"> */}
+          <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
             {feedbacks?.length &&
               feedbacks.map((feedback) => (
                 <UserFeedbacks
