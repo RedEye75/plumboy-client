@@ -3,7 +3,7 @@ import React from "react";
 const Feature = () => {
   return (
     <div>
-      <div className="px-4 py-16 mx-auto  md:px-24  lg:py-20  dark:text-gray-100">
+      <div className="px-4 py-16 mx-auto  md:px-24  lg:py-10  dark:text-gray-100">
         <h2
           data-aos="zoom-in"
           data-aos-duration="3000"

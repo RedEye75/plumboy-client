@@ -74,7 +74,7 @@ const Home = () => {
         data-aos="fade-up"
         data-aos-duration="3000"
         to={"/services"}
-        className="group  mt-3 mx-auto flex items-center justify-between w-56 rounded-lg border border-cyan-600 bg-cyan-600 px-5 py-2 transition-colors hover:bg-transparent focus:outline-none focus:ring"
+        className="group  mt-5 mx-auto flex items-center justify-between w-56 rounded-lg border border-cyan-600 bg-cyan-600 px-5 py-2 transition-colors hover:bg-transparent focus:outline-none focus:ring"
       >
         <span class="font-medium  text-white transition-colors group-hover:text-cyan-600 group-active:text-cyan-500">
           Find out more

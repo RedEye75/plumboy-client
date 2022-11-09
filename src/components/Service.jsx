@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import "react-photo-view/dist/react-photo-view.css";
 
 const Service = ({ service }) => {
   const { title, _id, price, img, description } = service;
@@ -11,9 +13,14 @@ const Service = ({ service }) => {
         className="flex max-w-screen-xl   justify-center"
       >
         <div className="rounded-lg border  bg-blue-200 ">
-          <a href="#!">
-            <img className=" h-48 w-full" src={img} alt="" />
-          </a>
+          <PhotoProvider>
+            <div className="foo">
+              <PhotoView key={img} src={img}>
+                <img className=" h-48 w-full" src={img} alt="" />
+              </PhotoView>
+            </div>
+          </PhotoProvider>
+
           <div className="p-6">
             <h5
               data-aos="fade-down"
