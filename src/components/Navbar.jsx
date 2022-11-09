@@ -49,9 +49,13 @@ const Navbar = () => {
             >
               Priceing
             </Link>
-            <Link to={"/about"} className="mr-5 font-bold hover:text-rose-600">
-              About
+            <Link
+              to={"/myReview"}
+              className="mr-5 font-bold hover:text-rose-600"
+            >
+              Feedback
             </Link>
+
             <Link
               to={"/contact"}
               className="mr-5 font-bold hover:text-rose-600"

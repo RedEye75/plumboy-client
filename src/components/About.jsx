@@ -9,11 +9,16 @@ const About = () => {
             <div className="w-full  sm:p-4 px-4 mb-6">
               <h1
                 data-aos="fade-right"
+                data-aos-duration="3000"
                 className="title-font overflow-hidden font-bold text-xl mb-2 uppercase font-serif text-start text-rose-900"
               >
                 Best Plumbing services for you
               </h1>
-              <div data-aos="zoom-out" className="font-semibold text-start">
+              <div
+                data-aos="zoom-out"
+                data-aos-duration="3000"
+                className="font-semibold text-start"
+              >
                 <p className="overflow-hidden">
                   The highly experienced plumber are here to help. Locally owned
                   and operated, we offer top-notch repair, installation and
@@ -23,25 +28,41 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-up" className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="p-4 sm:w-1/2 lg:w-1/4 w-1/2"
+            >
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 577K
               </h2>
               <p className="leading-relaxed">Users</p>
             </div>
-            <div data-aos="fade-up" className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="p-4 sm:w-1/2 lg:w-1/4 w-1/2"
+            >
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 358K
               </h2>
               <p className="leading-relaxed">Subscribes</p>
             </div>
-            <div data-aos="fade-up" className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="p-4 sm:w-1/2 lg:w-1/4 w-1/2"
+            >
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 75
               </h2>
               <p className="leading-relaxed">Enginner</p>
             </div>
-            <div data-aos="fade-up" className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="p-4 sm:w-1/2 lg:w-1/4 w-1/2"
+            >
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 700
               </h2>
@@ -50,6 +71,7 @@ const About = () => {
           </div>
           <div
             data-aos="fade-up"
+            data-aos-duration="3000"
             className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0"
           >
             <img

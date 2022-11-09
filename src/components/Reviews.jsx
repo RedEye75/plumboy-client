@@ -10,10 +10,16 @@ const Reviews = () => {
   };
   return (
     <div data-aos="fade-up">
-      <article className="overflow-hidden my-20  w-96 mx-auto shadow transition hover:shadow-lg">
-        <img alt="Office" src={img} className="object-cover" />
+      <article className="overflow-hidden w-3/4 rounded-lg my-20 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  mx-auto shadow transition hover:shadow-lg">
+        <div data-aos="fade-up" data-aos-duration="3000">
+          <img alt="Office" src={img} className="object-cover" />
+        </div>
 
-        <div className=" bg-blue-100 p-4 sm:p-6">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          className=" bg-blue-100 p-4 sm:p-6"
+        >
           <Link className="flex  justify-between">
             <h3 className="mt-0.5 text-lg font-bold text-cyan-900">{title}</h3>
             <p className="mt-0.5 text-lg font-bold text-orange-500">

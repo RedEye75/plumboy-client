@@ -3,113 +3,98 @@ import React from "react";
 const Feature = () => {
   return (
     <div>
-      <section className="bg-white ">
-        <div className="container px-6 py-10 mx-auto">
-          <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-black">
-            explore our awesome <span className="">Components</span>
-          </h1>
+      <div className="px-4 py-16 mx-auto  md:px-24  lg:py-20  dark:text-gray-100">
+        <h2
+          data-aos="zoom-in"
+          data-aos-duration="3000"
+          className="mb-8 text-4xl uppercase text-blue-400  font-bold font-serif  text-center"
+        >
+          Why you choose plumboy??
+        </h2>
 
-          <p className="mt-4 text-gray-800 xl:mt-6 font-semibold">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
-            quam voluptatibus
-          </p>
+        <div className="= grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <div>
+            <img
+              data-aos="fade-right"
+              data-aos-duration="3000"
+              className="border-black"
+              src="https://www.benjaminfranklinplumbing.com/images/blog/10-Reasons-Why-a-Professional-Plumber-Is-Better-Than-DIY-_-Katy-TX.jpg"
+              alt=""
+            />
+          </div>
 
-          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
-              <span className="inline-block text-black dark:text-blue-400">
+          <div className="mt-5" data-aos="fade-up" data-aos-duration="3000">
+            <ul className=" text-black ml-44">
+              <li className="flex font-bold items-center space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  viewBox="0 0 512 512"
+                  className="w-5 h-5 fill-current dark:text-green-400"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-                  />
+                  <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                  <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
                 </svg>
-              </span>
-
-              <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                elegant Dark Mode
-              </h1>
-
-              <p className="text-gray-700 font-semibold">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ab nulla quod dignissimos vel non corrupti doloribus
-                voluptatum eveniet
-              </p>
-            </div>
-
-            <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
-              <span className="inline-block text-blue-500 dark:text-blue-400">
+                <span className="uppercase">Top Rated Service</span>
+              </li>
+              <li className="flex font-bold items-center space-y-5 space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  viewBox="0 0 512 512"
+                  className="w-5 h-5 fill-current mt-5 dark:text-green-400"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-                  />
+                  <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                  <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
                 </svg>
-              </span>
-
-              <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                Easy to customiztions
-              </h1>
-
-              <p className="text-gray-700 font-semibold">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ab nulla quod dignissimos vel non corrupti doloribus
-                voluptatum eveniet
-              </p>
-            </div>
-
-            <div className="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
-              <span className="inline-block text-blue-500 dark:text-blue-400">
+                <span className="uppercase">60 Days Services Warranty </span>
+              </li>
+              <li className="flex font-bold items-center mt-5 space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  viewBox="0 0 512 512"
+                  className="w-5 h-5 fill-current dark:text-green-400"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                  />
+                  <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                  <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
                 </svg>
-              </span>
-
-              <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                Simple & clean designs
-              </h1>
-
-              <p className="text-gray-700 font-semibold ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident ab nulla quod dignissimos vel non corrupti doloribus
-                voluptatum eveniet
-              </p>
-            </div>
+                <span className="uppercase">Free Estimates</span>
+              </li>
+              <li className="flex font-bold items-center mt-5 space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  className="w-5 h-5 fill-current dark:text-green-400"
+                >
+                  <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                  <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                </svg>
+                <span className="uppercase">24 Hours Emergency Service</span>
+              </li>
+              <li className="flex mt-5 font-bold items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  className="w-5 h-5 fill-current dark:text-green-400"
+                >
+                  <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                  <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                </svg>
+                <span className="uppercase   ">trusted and recommended</span>
+              </li>
+              <li className="flex font-bold items-center mt-5 space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  className="w-5 h-5 fill-current dark:text-green-400"
+                >
+                  <path d="M426.072,86.928A238.75,238.75,0,0,0,88.428,424.572,238.75,238.75,0,0,0,426.072,86.928ZM257.25,462.5c-114,0-206.75-92.748-206.75-206.75S143.248,49,257.25,49,464,141.748,464,255.75,371.252,462.5,257.25,462.5Z"></path>
+                  <polygon points="221.27 305.808 147.857 232.396 125.23 255.023 221.27 351.063 388.77 183.564 366.142 160.937 221.27 305.808"></polygon>
+                </svg>
+                <span className="uppercase">LICENSED & INSURED</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

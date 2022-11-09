@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const ServiceReviews = ({ data }) => {
   const { user } = useContext(AuthContext);
@@ -22,11 +23,31 @@ const ServiceReviews = ({ data }) => {
       reviewText,
     };
     console.log(review);
+
+    fetch("http://localhost:7000/reviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(review),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          form.reset();
+          // alert("Thanks for your feedback");
+          toast("Thanks for your feedback!", {
+            icon: "💙",
+          });
+        }
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
-    <div className="flex">
-      <div data-aos="fade-left">
+    <div className="lg:flex">
+      <div data-aos="fade-left" data-aos-duration="3000">
         <img
           className="h-96"
           src="https://img.freepik.com/free-vector/customer-survey-concept-illustration_114360-558.jpg?w=1060&t=st=1667978327~exp=1667978927~hmac=01475b941a68b84c093b767f66f2fa3eeeb494dce19667c62623cb764f63913a"
@@ -34,12 +55,12 @@ const ServiceReviews = ({ data }) => {
         />
       </div>
 
-      <div data-aos="fade-right" className="mt-5 ">
+      <div data-aos="fade-right" data-aos-duration="3000" className="mt-5 ">
         <h1
           data-aos="fade-up"
           className="text-3xl font-serif font-bold text-orange-500"
         >
-          Give us motivation sir..
+          Share Your Using Experience ❤️
         </h1>
 
         <form onSubmit={handleReview}>
@@ -47,8 +68,9 @@ const ServiceReviews = ({ data }) => {
             <div className="w-80">
               <input
                 type="text"
+                defaultValue={user?.name}
                 name="name"
-                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 dark:text-gray-100 focus:dark:border-violet-400"
+                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 text-black focus:dark:border-violet-400"
                 placeholder="Username"
                 required
               />
@@ -62,7 +84,7 @@ const ServiceReviews = ({ data }) => {
                 name="email"
                 defaultValue={user?.email}
                 readOnly
-                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 dark:text-gray-100 focus:dark:border-violet-400"
+                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 text-black focus:dark:border-violet-400"
                 placeholder="Email"
                 required
               />
@@ -77,7 +99,7 @@ const ServiceReviews = ({ data }) => {
                 id="username"
                 placeholder="image"
                 required
-                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 dark:text-gray-100 focus:dark:border-violet-400"
+                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 text-black focus:dark:border-violet-400"
               />
             </div>
           </div>
@@ -87,7 +109,7 @@ const ServiceReviews = ({ data }) => {
               <textarea
                 name="review"
                 id="bio"
-                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 dark:text-gray-100 focus:dark:border-violet-400"
+                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-cyan-200 dark:text-black focus:dark:border-violet-400"
                 rows="3"
                 required
                 placeholder="Enter brief about our service"
@@ -95,13 +117,11 @@ const ServiceReviews = ({ data }) => {
             </div>
           </div>
           <input
-            className="mx-auto mr-3 rounded-full 
-            bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px]
-             hover:text-white focus:outline-none focus:ring active:text-opacity-75
-               text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
+            className="mx-auto inline-flex gap-3 items-center mb-5 border-black rounded-md border bg-green-500 px-10 py-3 text-sm font-medium text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:outline-none focus:ring active:opacity-75 "
             type="submit"
             value="Submit"
           />
+          <Toaster />
         </form>
       </div>
     </div>

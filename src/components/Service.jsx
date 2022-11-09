@@ -5,7 +5,11 @@ const Service = ({ service }) => {
   const { title, _id, price, img, description } = service;
   return (
     <div>
-      <div data-aos="fade-up" className="flex max-w-screen-xl   justify-center">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="flex max-w-screen-xl   justify-center"
+      >
         <div className="rounded-lg border  bg-blue-200 ">
           <a href="#!">
             <img className=" h-48 w-full" src={img} alt="" />
@@ -13,6 +17,7 @@ const Service = ({ service }) => {
           <div className="p-6">
             <h5
               data-aos="fade-down"
+              data-aos-duration="3000"
               className="text-gray-900 text-xl font-bold mb-2"
             >
               {title}

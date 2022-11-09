@@ -4,13 +4,15 @@ const Contact = () => {
   return (
     <div className="mt-36 overflow-hidden">
       <h1
-        data-aos="fade-left"
+        data-aos="zoom-in"
+        data-aos-duration="3000"
         className="text-3xl font-bold font-serif text-blue-500 border-b-2"
       >
         Contact with our Enginner for reliable services
       </h1>
       <section
         data-aos="zoom-in"
+        data-aos-duration="3000"
         className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10 m-10"
       >
         <article className="flex overflow-hidden relative space-x-5 items-center">

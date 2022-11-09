@@ -15,6 +15,7 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        form.reset();
       })
       .catch((error) => console.error(error));
   };
@@ -31,11 +32,19 @@ const SignUp = () => {
   return (
     <div className=" ">
       <div className="w-full  p-8  space-y-3 rounded-xl mx-auto dark:text-gray-100">
-        <h1 className="text-2xl font-bold text-black text-center">Sign Up</h1>
+        <h1
+          data-aos="zoom-in"
+          data-aos-duration="3000"
+          className="text-2xl font-bold text-black text-center"
+        >
+          Sign Up
+        </h1>
 
-        <div className="flex justify-center gap-5">
+        <div className="flex  justify-center gap-5">
           <div>
             <img
+              data-aos="fade-up"
+              data-aos-duration="3000"
               className="h-96"
               src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7875.jpg?w=740&t=st=1667980946~exp=1667981546~hmac=c0835164818eec533497d06755d7e586cc70731924dc9e17efa4287314def960"
               alt=""
@@ -45,7 +54,8 @@ const SignUp = () => {
           <div>
             <form
               onSubmit={handleSignUp}
-              data-aos="fade-up"
+              data-aos="fade-left"
+              data-aos-duration="3000"
               novalidate=""
               className="space-y-6 mt-5 ng-untouched ng-pristine ng-valid"
             >
@@ -56,7 +66,7 @@ const SignUp = () => {
                   id="username"
                   placeholder="Username"
                   data-aos="fade-right"
-                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-pink-200 dark:text-gray-100 focus:dark:border-violet-400"
+                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-pink-200 text-black focus:dark:border-violet-400"
                 />
               </div>
               <div className="space-y-1 text-sm">
@@ -66,7 +76,7 @@ const SignUp = () => {
                   id="username"
                   placeholder="image"
                   data-aos="fade-right"
-                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-blue-200 dark:text-gray-100 focus:dark:border-violet-400"
+                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-blue-200 text-black focus:dark:border-violet-400"
                 />
               </div>
               <div className="space-y-1 text-sm">
@@ -76,7 +86,7 @@ const SignUp = () => {
                   id="username"
                   placeholder="Email"
                   data-aos="fade-right"
-                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-pink-200 dark:text-gray-100 focus:dark:border-violet-400"
+                  className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-pink-200 text-black focus:dark:border-violet-400"
                 />
               </div>
               <div className="space-y-1 text-sm">
@@ -91,10 +101,7 @@ const SignUp = () => {
               </div>
 
               <div className="flex items-center justify-between">
-                <p
-                  data-aos="zoom-in-up"
-                  className=" text-center sm:px-6 text-md dark:text-gray-800"
-                >
+                <p className=" text-center sm:px-6 text-md dark:text-gray-800">
                   Already have an account? <br />
                   <Link
                     to={"/signIn"}

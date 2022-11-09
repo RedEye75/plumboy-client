@@ -6,11 +6,13 @@ import Contact from "../components/Contact";
 import Error from "../components/Error";
 import Feature from "../components/Feature";
 import Home from "../components/Home";
+import MyReview from "../components/MyReview";
 import Priceing from "../components/Priceing";
 import Reviews from "../components/Reviews";
 import Services from "../components/Services";
 import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
+import UserFeedbacks from "../components/UserFeedbacks";
 import Root from "../Layout/Root";
 
 const router = createBrowserRouter([
@@ -37,13 +39,38 @@ const router = createBrowserRouter([
           fetch(`http://localhost:7000/services/${params.id}`),
       },
 
-      { path: "/about", element: <About></About> },
-      { path: "/contact", element: <Contact></Contact> },
-      { path: "/blogs", element: <Blogs></Blogs> },
-
-      { path: "/signIn", element: <SignIn></SignIn> },
-      { path: "/signUp", element: <SignUp></SignUp> },
-      { path: "/feature", element: <Feature></Feature> },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/signIn",
+        element: <SignIn></SignIn>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/feature",
+        element: <Feature></Feature>,
+      },
+      {
+        path: "/userFeedback",
+        element: <UserFeedbacks></UserFeedbacks>,
+      },
+      {
+        path: "/myReview",
+        element: <MyReview></MyReview>,
+      },
 
       {
         path: "*",

@@ -9,11 +9,13 @@ const Home = () => {
       <section className="bg-white  dark:text-gray-500">
         <div
           data-aos="fade-right"
+          data-aos-duration="3000"
           className="container  flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between"
         >
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             <h1
               data-aos="zoom-in"
+              data-aos-duration="3000"
               className="text-3xl font-serif font-bold leading-none sm:text-6xl"
             >
               <span className="text-rose-800">Professional </span>
