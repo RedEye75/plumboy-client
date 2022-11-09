@@ -17,11 +17,12 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const createUser = (email, pasword) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, pasword);
   };
 
   const ProviderLogin = (provider) => {
-    // setLoading(true);
+    setLoading(true);
     return signInWithPopup(auth, provider);
   };
 
@@ -36,6 +37,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       return unsubscribe();

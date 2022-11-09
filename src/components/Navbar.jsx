@@ -49,12 +49,17 @@ const Navbar = () => {
             >
               Priceing
             </Link>
-            <Link
-              to={"/myReview"}
-              className="mr-5 font-bold hover:text-rose-600"
-            >
-              Feedback
-            </Link>
+
+            {user?.uid ? (
+              <Link
+                to={"/myReview"}
+                className="mr-5 font-bold hover:text-rose-600"
+              >
+                Feedback
+              </Link>
+            ) : (
+              <></>
+            )}
 
             <Link
               to={"/contact"}
