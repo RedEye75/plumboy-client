@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import About from "./About";
 import Service from "./Service";
 import Feature from "./Feature";
+import useSetTitle from "../hooks/useSetTitle";
 
 const Home = () => {
+  useSetTitle("Home");
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch("http://localhost:7000/limitServices")

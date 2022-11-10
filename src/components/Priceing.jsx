@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// react hot tooster
 import toast, { Toaster } from "react-hot-toast";
-
+import useSetTitle from "../hooks/useSetTitle";
 const notify = () => toast.success("Your Request successfully added!");
 
 const Priceing = () => {
+  useSetTitle("priceing");
   return (
     <div>
       <section className="text-gray-400 bg-white body-font">
         <div className="container px-5 py-24 mx-auto">
           <div
             data-aos="zoom-in"
+            data-aos-duration="3000"
             className="flex flex-col text-center w-full mb-20"
           >
             <h1 className="sm:text-4xl text-3xl font-bold title-font mb-2 text-black">
@@ -21,13 +24,9 @@ const Priceing = () => {
               services.
             </p>
           </div>
-          <div
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            className="lg:w-2/3 w-full mx-auto overflow-auto"
-          >
+          <div className="lg:w-2/3 w-full mx-auto overflow-auto">
             <table className="table-auto w-full text-left whitespace-no-wrap">
-              <thead>
+              <thead data-aos="fade-down" data-aos-duration="3000">
                 <tr>
                   <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">
                     Services
@@ -40,7 +39,7 @@ const Priceing = () => {
                 </tr>
               </thead>
               <tbody className="text-black text-lg font-semibold">
-                <tr>
+                <tr data-aos="fade-right" data-aos-duration="3000">
                   <td className="px-4   py-3">Plumbing Installation</td>
 
                   <td className="px-4 py-3 text-lg ">$68</td>
@@ -48,7 +47,7 @@ const Priceing = () => {
                     <input name="plan" type="radio" />
                   </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-right" data-aos-duration="3000">
                   <td className="border-t-2 border-gray-800 px-4 py-3">
                     Commercial Service
                   </td>
@@ -60,7 +59,7 @@ const Priceing = () => {
                     <input name="plan" type="radio" />
                   </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-right" data-aos-duration="3000">
                   <td className="border-t-2 border-gray-800 px-4 py-3">
                     Residential Service
                   </td>
@@ -72,7 +71,7 @@ const Priceing = () => {
                     <input name="plan" type="radio" />
                   </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-right" data-aos-duration="3000">
                   <td className="border-t-2 border-b-2 border-gray-800 px-4 py-3">
                     Water Heater Repair
                   </td>
@@ -84,7 +83,7 @@ const Priceing = () => {
                     <input name="plan" type="radio" />
                   </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-right" data-aos-duration="3000">
                   <td className="border-t-2 border-b-2 border-gray-800 px-4 py-3">
                     Emergency Services
                   </td>
@@ -96,7 +95,7 @@ const Priceing = () => {
                     <input name="plan" type="radio" />
                   </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-right" data-aos-duration="3000">
                   <td className="border-t-2 border-b-2 border-gray-800 px-4 py-3">
                     Pipe Replacement
                   </td>
@@ -111,7 +110,11 @@ const Priceing = () => {
               </tbody>
             </table>
           </div>
-          <div className="mx-auto mt-3">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            className="mx-auto mt-3"
+          >
             <Link className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring">
               <span className="absolute inset-x-0 top-0 h-[2px] bg-indigo-600 transition-all group-hover:h-full group-active:bg-indigo-500"></span>
 

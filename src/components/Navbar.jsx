@@ -12,11 +12,11 @@ const Navbar = () => {
   };
   return (
     <div>
-      <header className="text-gray-400 bg-black   body-font">
+      <header className="text-gray-400  w-full bg-black   body-font">
         <div className="container mx-auto   flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link
             to={"/"}
-            className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+            className="flex  title-font font-medium items-center text-white mb-4 md:mb-0"
           >
             <img
               className="h-7 w-8"
@@ -25,7 +25,7 @@ const Navbar = () => {
             />
             <span
               data-aos="fade-up"
-              className="ml-3 font-bold font-serif text-blue-200 text-3xl"
+              className=" font-bold font-serif text-blue-200 text-3xl"
             >
               PlumBoy
             </span>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 to={"/myReview"}
                 className="mr-5 font-bold hover:text-rose-600"
               >
-                Feedback
+                My reviews
               </Link>
             ) : (
               <></>
@@ -70,6 +70,17 @@ const Navbar = () => {
             <Link to={"/blogs"} className="mr-5 font-bold hover:text-rose-600">
               Blogs
             </Link>
+
+            {user?.uid ? (
+              <Link
+                to={"/addService"}
+                className="mr-5 font-bold hover:text-rose-600"
+              >
+                Add Service
+              </Link>
+            ) : (
+              <></>
+            )}
 
             {user?.uid ? (
               <button
@@ -102,6 +113,16 @@ const Navbar = () => {
                   </span>
                 </Link>
               </>
+            )}
+
+            {user?.uid ? (
+              <img
+                src={user.photoURL}
+                className="rounded-full mx-5 w-10 shadow-lg"
+                alt="Avatar"
+              />
+            ) : (
+              <></>
             )}
           </nav>
         </div>

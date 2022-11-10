@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import useSetTitle from "../hooks/useSetTitle";
 
 const ServiceReviews = ({ data }) => {
+  useSetTitle("ServiceReviews");
   const { user } = useContext(AuthContext);
   const { serviceName, serviceId } = data;
 
@@ -28,6 +30,7 @@ const ServiceReviews = ({ data }) => {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        // authorization: `Bearer ${localStorage.getItem("plumToken")}`,
       },
       body: JSON.stringify(review),
     })

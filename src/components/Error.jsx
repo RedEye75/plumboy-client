@@ -1,30 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useSetTitle from "../hooks/useSetTitle";
 
 const Error = () => {
+  useSetTitle("Error");
   return (
     <div>
       <div
         data-aos="fade-up"
+        data-aos-duration="3000"
         className="grid h-screen place-content-center bg-white"
       >
-        <div className="text-center">
-          <strong className="text-9xl font-black text-blue-200">404</strong>
+        <img
+          className="h-96"
+          src="https://static.vecteezy.com/system/resources/previews/005/883/254/original/page-not-found-404-error-concept-illustration-free-vector.jpg"
+          alt=""
+        />
 
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Uh-oh!
-          </h1>
-
-          <p className="mt-4 text-gray-500">We can't find that page.</p>
-
-          <Link
-            to={"/"}
-            className="mt-6 inline-block rounded bg-rose-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring"
-          >
-            Go Back Home
-          </Link>
-        </div>
+        <Link
+          to={"/"}
+          className=" inline-flex text-center -mt-3 mx-auto rounded border-2 border-[#171515] bg-[#171515] px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:outline-none focus:ring active:opacity-75"
+        >
+          Go Back Home
+        </Link>
       </div>
+      {/* </div> */}
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import React from "react";
+import useSetTitle from "../hooks/useSetTitle";
 
 const Contact = () => {
+  useSetTitle("Contact");
   return (
     <div className="mt-36 overflow-hidden">
       <h1

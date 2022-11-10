@@ -29,11 +29,11 @@ const Footer = () => {
                 <div className="flex mt-6 -mx-2">
                   <Link
                     to="#"
-                    className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                    className="mx-2 text-red-600 transition-colors duration-300 hover:text-blue-500"
                     aria-label="Reddit"
                   >
                     <svg
-                      className="w-5 h-5 fill-current"
+                      className="w-5 h-5 text-red-600 hover:text-blue-600 fill-current"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -44,11 +44,11 @@ const Footer = () => {
 
                   <Link
                     to="#"
-                    className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                    className="mx-2 transition-colors duration-300 "
                     aria-label="Facebook"
                   >
                     <svg
-                      className="w-5 h-5 fill-current"
+                      className="w-5 h-5  text-red-600 hover:text-blue-600 fill-current"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -59,11 +59,11 @@ const Footer = () => {
 
                   <Link
                     to="#"
-                    className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                    className="mx-2 transition-colors duration-300"
                     aria-label="Github"
                   >
                     <svg
-                      className="w-5 h-5 fill-current"
+                      className="w-5 h-5  text-red-600 hover:text-blue-600 fill-current"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const Footer = () => {
               className="mt-6 lg:mt-0 lg:flex-1"
             >
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                <div>
+                <div className="text-start">
                   <h3 className=" font-bold text-blue-400 uppercase ">About</h3>
                   <Link
                     to="#"
@@ -103,7 +103,7 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                <div>
+                <div className="text-start">
                   <h3 className="font-bold text-blue-400 uppercase ">Blog</h3>
                   <Link
                     to="#"
@@ -115,7 +115,7 @@ const Footer = () => {
                     to="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Music
+                    info
                   </Link>
                   <Link
                     to="#"
@@ -125,36 +125,54 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                <div>
+                <div className="text-start">
                   <h3 className="font-bold text-blue-400 uppercase ">
-                    Products
+                    services
                   </h3>
                   <Link
                     to="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Mega cloud
+                    plumbing install
                   </Link>
                   <Link
                     to="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Aperion UI
+                    water Heater Repair
                   </Link>
                   <Link
                     to="#"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Meraki UI
+                    Emergency
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                  >
+                    Pipe Replacement
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                  >
+                    Commercial Service
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                  >
+                    Residential Service
                   </Link>
                 </div>
 
-                <div>
+                <div className="text-start">
                   <h3 className="font-bold text-blue-400 uppercase ">
                     Contact
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
-                    +123456789
+                    0123456789
                   </span>
                   <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
                     plumboy@email.com

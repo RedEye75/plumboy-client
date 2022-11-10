@@ -2,21 +2,41 @@ import { data } from "autoprefixer";
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 import UserFeedbacks from "./UserFeedbacks";
+import toast, { Toaster } from "react-hot-toast";
+import useSetTitle from "../hooks/useSetTitle";
 
 const MyReview = () => {
-  const { user } = useContext(AuthContext);
+  useSetTitle("MyReview");
+  const { user, logOut } = useContext(AuthContext);
   const [feedbacks, setFeedbacks] = useState({});
+
   useEffect(() => {
-    fetch(`http://localhost:7000/myFeedback?email=${user?.email}`)
-      .then((res) => res.json())
-      .then((data) => setFeedbacks(data));
-  }, [user?.email]);
+    if (!user?.email) {
+      return;
+    }
+    fetch(`http://localhost:7000/myFeedback?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("plumToken")}`,
+      },
+    })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          // return logOut();
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setFeedbacks(data);
+      });
+  }, [user?.email, logOut]);
+
   // review update
   const updateReview = (id) => {
     fetch(`http://localhost:7000/myFeedback/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("plumToken")}`,
       },
       body: JSON.stringify({}),
     })
@@ -36,13 +56,17 @@ const MyReview = () => {
     if (proceed) {
       fetch(`http://localhost:7000/myFeedback/${id}`, {
         method: "DELETE",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("plumToken")}`,
+        },
       })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
 
           if (data.deletedCount) {
-            alert("Your review deleted Successfully");
+            // alert("Your review deleted Successfully");
+            toast.success("Your review deleted Successfully!");
             const restReview = feedbacks.filter(
               (feedback) => feedback._id !== id
             );
@@ -60,25 +84,35 @@ const MyReview = () => {
             <h1
               data-aos="zoom-in"
               data-aos-duration="3000"
-              className="sm:text-3xl text-2xl font-bold title-font mb-4 text-blue-400"
+              className="sm:text-3xl text-2xl font-bold title-font mb-4 border-b text-blue-400"
             >
-              Feedback = {feedbacks.length}
+              My Reviews
             </h1>
           </div>
-          {/* <div className="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1"> */}
-          <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
-            {feedbacks?.length &&
-              feedbacks.map((feedback) => (
-                <UserFeedbacks
-                  key={feedback._id}
-                  feedback={feedback}
-                  updateReview={updateReview}
-                  deleteReview={deleteReview}
-                ></UserFeedbacks>
-              ))}
-          </div>
+          {!feedbacks?.length ? (
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="text-3xl font-bold text-red-500"
+            >
+              No reviews were added
+            </h2>
+          ) : (
+            <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
+              {feedbacks?.length &&
+                feedbacks.map((feedback) => (
+                  <UserFeedbacks
+                    key={feedback._id}
+                    feedback={feedback}
+                    updateReview={updateReview}
+                    deleteReview={deleteReview}
+                  ></UserFeedbacks>
+                ))}
+            </div>
+          )}
         </div>
-      </section>
+      </section>{" "}
+      <Toaster />
     </div>
   );
 };

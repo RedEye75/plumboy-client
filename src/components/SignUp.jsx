@@ -2,9 +2,11 @@ import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
+import useSetTitle from "../hooks/useSetTitle";
 
 const SignUp = () => {
   const { createUser, ProviderLogin } = useContext(AuthContext);
+  useSetTitle("signup");
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -105,7 +107,7 @@ const SignUp = () => {
                   Already have an account? <br />
                   <Link
                     to={"/signIn"}
-                    className=" font-bold dark:text-blue-800"
+                    className=" font-bold hover:underline dark:text-blue-800"
                   >
                     {" "}
                     Sign In

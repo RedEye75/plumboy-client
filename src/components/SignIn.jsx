@@ -1,20 +1,48 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
+import useSetTitle from "../hooks/useSetTitle";
 
 const SignIn = () => {
   const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  useSetTitle("signin");
+  const from = location.state?.from?.pathname || "/";
 
   const handaleSignIn = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        const currentUser = {
+          email: user.email,
+        };
+        console.log(currentUser);
         form.reset();
+        // get jwt token
+        fetch(
+          "http://localhost:7000/jwt",
+
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(currentUser),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            localStorage.setItem("plumToken", data.token);
+            navigate(from, { replace: true });
+          });
       })
       .catch((error) => console.error(error));
   };
@@ -52,6 +80,7 @@ const SignIn = () => {
                   name="email"
                   className="w-full rounded-lg bg-blue-200 border-black p-4 pr-12 text-sm shadow-sm"
                   placeholder="Enter email"
+                  required
                 />
               </div>
             </div>
@@ -64,6 +93,7 @@ const SignIn = () => {
                 <input
                   name="password"
                   type="password"
+                  required
                   className="w-full  bg-blue-200 rounded-lg border-black p-4 pr-12 text-sm shadow-sm"
                   placeholder="Enter password"
                 />
@@ -73,7 +103,10 @@ const SignIn = () => {
             <div className="flex items-center justify-between">
               <p className="font-semibold text-gray-500">
                 No account ?
-                <Link to={"/signUp"} className="font-bold text-lime-800 ">
+                <Link
+                  to={"/signUp"}
+                  className="font-bold hover:underline text-lime-800 "
+                >
                   {" "}
                   Sign up
                 </Link>

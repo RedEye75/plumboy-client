@@ -1,47 +1,12 @@
 import React from "react";
+import useSetTitle from "../hooks/useSetTitle";
 
 const UserFeedbacks = ({ feedback, updateReview, deleteReview }) => {
+  useSetTitle("UserFeedbacks");
   const { reviewText, customer, _id, image, serviceName } = feedback;
 
   return (
     <div>
-      {/* <div className="p-2   w-full">
-        <div className="h-full grid grid-cols-3   gap-2 items-center border-black border p-4 rounded-lg">
-          <div>
-            <img
-              alt="team"
-              className="w-16  h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full "
-              src={image}
-            />
-            <p>{customer}</p>
-          </div>
-          <div className="flex-grow">
-            <h2 className="text-gray-900 title-font font-bold">{serviceName}</h2>
-            <p className="text-gray-500">{reviewText}</p>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <button
-              onClick={() => updateReview(_id)}
-              className="inline-block mr-3 rounded-full  border-2 border-black  focus:outline-none focus:ring text-black"
-            >
-              <span className="block rounded-full hover:bg-white px-5 py-3 text-sm font-medium bg-green-500">
-                Update
-              </span>
-            </button>
-            <button
-              onClick={() => deleteReview(_id)}
-              className="inline-block mr-3 rounded-full border-2 border-black  focus:outline-none focus:ring text-black"
-            >
-              <span className="block rounded-full hover:bg-white px-5 py-3 text-sm font-medium bg-red-500">
-                Delete
-              </span>
-            </button>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl"> */}
-      {/* <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3"> */}
       <div
         data-aos="fade-up"
         data-aos-duration="3000"

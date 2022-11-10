@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import About from "../components/About";
+import AddService from "../components/AddService";
 import Blogs from "../components/Blogs";
 
 import Contact from "../components/Contact";
@@ -14,6 +15,7 @@ import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
 import UserFeedbacks from "../components/UserFeedbacks";
 import Root from "../Layout/Root";
+import PrivateRoute from "../Routers/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services></Services>,
+        element: (
+          <PrivateRoute>
+            <Services></Services>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/reviews/:id",
@@ -64,12 +70,24 @@ const router = createBrowserRouter([
         element: <Feature></Feature>,
       },
       {
+        path: "/addService",
+        element: (
+          <PrivateRoute>
+            <AddService></AddService>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/userFeedback",
         element: <UserFeedbacks></UserFeedbacks>,
       },
       {
         path: "/myReview",
-        element: <MyReview></MyReview>,
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
+          </PrivateRoute>
+        ),
       },
 
       {
