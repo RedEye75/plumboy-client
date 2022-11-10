@@ -29,14 +29,15 @@ const Home = () => {
             >
               <span className="text-rose-800">Professional </span>
               plumbing service for your
-              <span className="dark:text-violet-400"> Home</span>
+              <span className="dark:text-violet-300"> Home</span>
+              <span className="dark:text-rose-400"> &</span>
+              <span className="dark:text-cyan-200"> Company</span>
             </h1>
             <p className="mt-6 mb-8 text-lg sm:mb-12"></p>
             <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
               <Link
                 to={"/services"}
                 className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-3 focus:outline-none focus:ring"
-                href="/download"
               >
                 <span className="absolute inset-x-0 top-0 h-[2px] bg-indigo-600 transition-all group-hover:h-full group-active:bg-indigo-500"></span>
 
@@ -76,27 +77,10 @@ const Home = () => {
         data-aos="fade-up"
         data-aos-duration="3000"
         to={"/services"}
-        className="group  mt-5 mx-auto flex items-center justify-between w-56 rounded-lg border border-cyan-600 bg-cyan-600 px-5 py-2 transition-colors hover:bg-transparent focus:outline-none focus:ring"
+        className="group  mt-5 mx-auto flex items-center justify-between w-56 rounded-lg border border-cyan-600 bg-cyan-600 px-2  py-2 transition-colors hover:bg-transparent focus:outline-none focus:ring"
       >
-        <span class="font-medium  text-white transition-colors group-hover:text-cyan-600 group-active:text-cyan-500">
+        <span className="font-medium py-2 mx-auto text-white transition-colors group-hover:text-cyan-600 group-active:text-cyan-500">
           Find out more
-        </span>
-
-        <span class="ml-4 flex-shrink-0 rounded-full border border-current bg-white p-2 text-cyan-600 group-active:text-cyan-500">
-          <svg
-            className="h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
         </span>
       </Link>
 

@@ -80,7 +80,7 @@ const Footer = () => {
               data-aos-duration="3000"
               className="mt-6 lg:mt-0 lg:flex-1"
             >
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols- gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <div className="text-start">
                   <h3 className=" font-bold text-blue-400 uppercase ">About</h3>
                   <Link
