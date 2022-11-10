@@ -9,7 +9,7 @@ const Home = () => {
   useSetTitle("Home");
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:7000/limitServices")
+    fetch("https://assignment-11-server-seven-lilac.vercel.app/limitServices")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -19,7 +19,7 @@ const Home = () => {
         <div
           data-aos="fade-right"
           data-aos-duration="3000"
-          className="container  flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between"
+          className="container  flex flex-col justify-center p-6 mx-auto sm:py-12  lg:flex-row lg:justify-center"
         >
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             <h1
@@ -66,7 +66,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl gap-3 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 ">
         {services.map((service) => (
           <Service key={service._id} service={service}></Service>
         ))}

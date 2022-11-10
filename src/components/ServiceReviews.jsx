@@ -26,7 +26,7 @@ const ServiceReviews = ({ data }) => {
     };
     console.log(review);
 
-    fetch("http://localhost:7000/reviews", {
+    fetch("https://assignment-11-server-seven-lilac.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

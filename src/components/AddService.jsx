@@ -19,7 +19,7 @@ const AddService = () => {
       description: bio,
     };
     // console.log(service);
-    fetch("http://localhost:7000/serviceAdd", {
+    fetch("https://assignment-11-server-seven-lilac.vercel.app/serviceAdd", {
       method: "POST",
       headers: {
         "content-type": "application/json",

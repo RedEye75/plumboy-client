@@ -8,7 +8,7 @@ const SignIn = () => {
   const { signIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  useSetTitle("signin");
+  useSetTitle("SignIn");
   const from = location.state?.from?.pathname || "/";
 
   const handaleSignIn = (event) => {
@@ -27,7 +27,7 @@ const SignIn = () => {
         form.reset();
         // get jwt token
         fetch(
-          "http://localhost:7000/jwt",
+          "https://assignment-11-server-seven-lilac.vercel.app/jwt",
 
           {
             method: "POST",
@@ -47,9 +47,9 @@ const SignIn = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <div className="max-w-screen-xl">
-      <section className="  flex flex-wrap lg:h-screen lg:items-center ">
-        <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+    <div className="">
+      <section className=" lg:flex  justify-center ">
+        <div className="w-full mt-12 px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
           <div
             data-aos="zoom-in"
             data-aos-duration="3000"
@@ -67,7 +67,7 @@ const SignIn = () => {
             data-aos-duration="3000"
             onSubmit={handaleSignIn}
             action=""
-            className="mx-auto mt-8 mb-0 max-w-md space-y-4"
+            className="mx-auto mt-8 mb-0 max-w-lg space-y-4"
           >
             <div>
               <label for="email" className="sr-only">
@@ -113,10 +113,7 @@ const SignIn = () => {
               </p>
 
               <input
-                className="mx-auto mr-3 rounded-full 
-            bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px]
-             hover:text-white focus:outline-none focus:ring active:text-opacity-75
-               text-black bg-blue-200 px-16 py-3 text-sm font-medium hover:bg-transparent"
+                className="mx-auto inline-flex gap-3 items-center rounded-full border-2 border-blue-500 bg-blue-500 px-8 py-3 font-bold  text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:outline-none focus:ring active:opacity-75"
                 type="submit"
                 value="Sign In"
               />
@@ -124,11 +121,7 @@ const SignIn = () => {
           </form>
         </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className=" h-64 w-full sm:h-full lg:h-full p-20  lg:w-1/2"
-        >
+        <div data-aos="fade-up" data-aos-duration="3000" className="">
           <img
             alt="Welcome"
             src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7963.jpg?w=740&t=st=1667978979~exp=1667979579~hmac=1fa79fec277840d52e989a46116a578d2607f7b649711c941885c57a25a7a9b1"

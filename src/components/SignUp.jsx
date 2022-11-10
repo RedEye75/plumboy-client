@@ -6,7 +6,7 @@ import useSetTitle from "../hooks/useSetTitle";
 
 const SignUp = () => {
   const { createUser, ProviderLogin } = useContext(AuthContext);
-  useSetTitle("signup");
+  useSetTitle("SignUp");
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -42,7 +42,7 @@ const SignUp = () => {
           Sign Up
         </h1>
 
-        <div className="flex  justify-center gap-5">
+        <div className="lg:flex  justify-center gap-5">
           <div>
             <img
               data-aos="fade-up"
@@ -115,7 +115,7 @@ const SignUp = () => {
                 </p>
 
                 <input
-                  className="mx-auto inline-flex gap-3 items-center rounded-full border-2 border-pink-500 bg-pink-500 px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:outline-none focus:ring active:opacity-75 "
+                  className="mx-auto inline-flex gap-3 items-center rounded-full border-2 border-pink-500 bg-pink-500 px-8 py-3  font-bold text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:outline-none focus:ring active:opacity-75 "
                   type="submit"
                   value="Sign Up"
                 />

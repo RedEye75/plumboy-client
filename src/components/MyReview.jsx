@@ -14,11 +14,14 @@ const MyReview = () => {
     if (!user?.email) {
       return;
     }
-    fetch(`http://localhost:7000/myFeedback?email=${user?.email}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("plumToken")}`,
-      },
-    })
+    fetch(
+      `https://assignment-11-server-seven-lilac.vercel.app/myFeedback?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("plumToken")}`,
+        },
+      }
+    )
       .then((res) => {
         if (res.status === 401 || res.status === 403) {
           // return logOut();
@@ -32,14 +35,17 @@ const MyReview = () => {
 
   // review update
   const updateReview = (id) => {
-    fetch(`http://localhost:7000/myFeedback/${id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem("plumToken")}`,
-      },
-      body: JSON.stringify({}),
-    })
+    fetch(
+      `https://assignment-11-server-seven-lilac.vercel.app/myFeedback/${id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("plumToken")}`,
+        },
+        body: JSON.stringify({}),
+      }
+    )
       .then((res) => res.json())
       .then((data) => console.log(data));
     if (data.modifiedCount > 0) {
@@ -54,12 +60,15 @@ const MyReview = () => {
   const deleteReview = (id) => {
     const proceed = window.confirm("Are you sure ??");
     if (proceed) {
-      fetch(`http://localhost:7000/myFeedback/${id}`, {
-        method: "DELETE",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("plumToken")}`,
-        },
-      })
+      fetch(
+        `https://assignment-11-server-seven-lilac.vercel.app/myFeedback/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("plumToken")}`,
+          },
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
